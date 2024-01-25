@@ -1,5 +1,6 @@
-// src/myModule.ts
-export const add = (a, b) => a + b;
+//* 1).
+//* Businesses use keypad letters in creative ways to spell out a phone number and make it more memorable.
+//* Example: http://en.wikipedia.org/wiki/File:Telephone-keypad2.svg
 export const telephoneWord = (digitString) => {
     const myMap = new Map();
     myMap.set("0", "0");
@@ -12,7 +13,6 @@ export const telephoneWord = (digitString) => {
     myMap.set("7", "PQRS");
     myMap.set("8", "TUV");
     myMap.set("9", "WXYZ");
-    console.log(myMap);
     const digitStringAsArray = digitString.split("");
     return digitStringAsArray
         .reduce((acc, val) => {

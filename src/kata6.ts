@@ -1,6 +1,14 @@
-// src/myModule.ts
+//* 1).
+//* Businesses use keypad letters in creative ways to spell out a phone number and make it more memorable.
+//* Example: http://en.wikipedia.org/wiki/File:Telephone-keypad2.svg
 
-export const add = (a: number, b: number): number => a + b;
+//* Create a mapping for your dialer as given in the above link. Constraints:
+
+//* letters are all uppercase
+//* digits 0, 1 are mapped to 0, 1 respectively
+//* Write a function that takes four digits of a
+//* phone number, and returns a list of all of the words that can be written with that number.
+//* (You should return all permutations, not only English words.)
 
 type Digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 type WordsDigit =
@@ -27,8 +35,6 @@ export const telephoneWord = (digitString: string): string[] => {
 	myMap.set("7", "PQRS");
 	myMap.set("8", "TUV");
 	myMap.set("9", "WXYZ");
-
-	console.log(myMap);
 
 	const digitStringAsArray = digitString.split("");
 
